@@ -8,18 +8,20 @@
     tools:context=".MainActivity">
 
    <Button
-       android:id="@+id/btn1"
+       android:id="@+id/focus_Session"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:text="Start Focus Session"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent"
        />
 
    <Button
-       android:id="@+id/btn2"
+       android:id="@+id/new_Habit"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       app:layout_constraintStart_toEndOf="@id/btn1"
+       android:text="Create Habit"
+       app:layout_constraintStart_toEndOf="@id/focus_Session"
        app:layout_constraintTop_toTopOf="parent"
        />
 </androidx.constraintlayout.widget.ConstraintLayout>
