@@ -1,27 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/habit_background">
 
+   <!-- Heading Text -->
+   <TextView
+       android:id="@+id/txtHeading"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Habit Garden"
+       android:textSize="24sp"
+       android:textStyle="bold"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="16dp" />
+
+   <!-- Add Habit Button -->
    <Button
-       android:id="@+id/focus_Session"
+       android:id="@+id/btnAddHabit"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Add Habit"
+       app:layout_constraintTop_toBottomOf="@id/txtHeading"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="24dp" />
+
+   <!-- Start Focus Session Button -->
+   <Button
+       android:id="@+id/btnStartFocus"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="Start Focus Session"
+       app:layout_constraintTop_toBottomOf="@id/btnAddHabit"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       />
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="16dp" />
 
-   <Button
-       android:id="@+id/new_Habit"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="Create Habit"
-       app:layout_constraintStart_toEndOf="@id/focus_Session"
-       app:layout_constraintTop_toTopOf="parent"
-       />
+   <!-- RecyclerView for Habits -->
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerViewHabits"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintTop_toBottomOf="@id/btnStartFocus"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_marginTop="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
