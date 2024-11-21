@@ -10,8 +10,18 @@
         android:layout_weight="1"
         android:textSize="18sp"
         android:text="Sample Habit"
-        android:padding="4dp"
+        android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </TextView>
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@id/habitName"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

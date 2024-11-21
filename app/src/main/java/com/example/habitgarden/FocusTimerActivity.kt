@@ -21,8 +21,13 @@ class FocusTimerActivity : AppCompatActivity() {
         val btnStartTimer = findViewById<Button>(R.id.btnStartTimer)
         val btnEndSession = findViewById<Button>(R.id.btnEndSession)
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.nature_sound)
-        mediaPlayer.isLooping = true
+        try {
+            mediaPlayer = MediaPlayer.create(this, R.raw.nature_sound)
+            mediaPlayer.isLooping = true
+        } catch (e: Exception) {
+            Toast.makeText(this, "Error loading sound", Toast.LENGTH_SHORT).show()
+        }
+
 
         btnStartTimer.setOnClickListener {
             mediaPlayer.start()
