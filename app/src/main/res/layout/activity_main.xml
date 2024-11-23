@@ -14,6 +14,7 @@
        android:text="Habit Garden"
        android:textSize="24sp"
        android:textStyle="bold"
+       android:textColor="#1B5E20"
        app:layout_constraintTop_toTopOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +25,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="Add Habit"
+       android:backgroundTint="#388E3C"
        app:layout_constraintTop_toBottomOf="@id/txtHeading"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +36,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="Start Focus Session"
+       android:backgroundTint="#388E3C"
        app:layout_constraintTop_toBottomOf="@id/btnAddHabit"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
@@ -43,11 +46,12 @@
        android:id="@+id/recyclerViewHabits"
        android:layout_width="match_parent"
        android:layout_height="250dp"
-       android:background="#A8F3F3"
+       android:background="@android:color/transparent"
        app:layout_constraintTop_toBottomOf="@id/btnStartFocus"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        android:layout_marginTop="16dp" />
+
    <ImageView
        android:id="@+id/plantImageView"
        android:layout_width="200dp"
